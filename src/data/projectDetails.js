@@ -273,4 +273,71 @@ export const projectDetails = {
       { key: '9', name: 'Rotating Cube' },
     ],
   },
+
+  'project-3': {
+    heroImage: '/images/projects/portfolio-cover.jpg',
+    demoVideo: null,
+    introduction:
+      'A modern, responsive personal portfolio website designed and built from scratch to showcase software engineering projects, technical skills, verified certifications, and academic background. The platform emphasizes aesthetic excellence, high performance, and seamless user experience through a tailored glassmorphic dark theme and interactive micro-animations.',
+    quickFacts: [
+      { icon: '💻', label: 'Project Type', value: 'Personal Portfolio Website' },
+      { icon: '👩‍💻', label: 'Developer', value: 'Umesha Rathnayake (Frontend & UI/UX)' },
+      { icon: '⚡', label: 'Build Tool', value: 'Vite + React 18' },
+      { icon: '🎨', label: 'Design System', value: 'CSS Modules (Glassmorphic Theme)' },
+      { icon: '🚀', label: 'Deployment', value: 'Vercel (CI/CD via GitHub)' },
+    ],
+    problem:
+      'Standard template portfolios often lack personal branding, feel generic, suffer from slow load times, or fail to effectively highlight both technical software engineering depth and modern UI/UX design sensibilities.',
+    solution:
+      'Developed a custom, high-performance Single Page Application using React and Vite with scoped CSS Modules. The interface integrates Framer Motion for subtle scroll reveals, an interactive certificate modal, project case studies, and a direct CV download option.',
+    objectives: [
+      'Deliver lightning-fast page load speeds and smooth navigation using Vite and React',
+      'Craft a distinct, premium glassmorphism dark aesthetic with neon emerald accents',
+      'Implement component-level scoped styling with CSS Modules for clean maintainability',
+      'Incorporate Framer Motion scroll animations and interactive UI micro-interactions',
+      'Establish a streamlined CI/CD pipeline via GitHub and Vercel for automated redeployments',
+    ],
+    detailTechStack: [
+      { name: 'React 18', icon: '⚛️' },
+      { name: 'Vite', icon: '⚡' },
+      { name: 'JavaScript', icon: '📜' },
+      { name: 'CSS Modules', icon: '🎨' },
+      { name: 'Framer Motion', icon: '✨' },
+      { name: 'Vercel', icon: '▲' },
+      { name: 'Git & GitHub', icon: '🐙' },
+      { name: 'React Icons', icon: '🔍' },
+    ],
+    components: [
+      {
+        name: 'Hero & Live CV Download',
+        image: '/images/projects/portfolio-cover.jpg',
+      },
+    ],
+    myContributions: [
+      {
+        title: 'Component Architecture & Development',
+        icon: '⚛️',
+        description:
+          'Structured the application into modular, reusable components using React with Vite. Leveraged CSS Modules for strict style scoping, ensuring clean code separation and zero global style leaks.',
+      },
+      {
+        title: 'UI/UX Design & Glassmorphism Theme',
+        icon: '🎨',
+        description:
+          'Created a dark-mode theme featuring subtle glassmorphic blur effects, emerald green glow accents, custom typography, and fully responsive layouts across mobile, tablet, and desktop.',
+      },
+      {
+        title: 'Motion Design & Micro-interactions',
+        icon: '✨',
+        description:
+          'Implemented Framer Motion scroll reveals, dynamic role typing banner, interactive certificate viewers, and smooth hover animations to create an engaging experience.',
+      },
+      {
+        title: 'CI/CD Pipeline & Automated Deployment',
+        icon: '🚀',
+        description:
+          'Configured continuous integration and deployment using GitHub and Vercel, enabling instant automatic builds and production updates on every git push.',
+      },
+    ],
+  },
 };

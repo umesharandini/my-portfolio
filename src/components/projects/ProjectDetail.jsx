@@ -178,29 +178,32 @@ export default function ProjectDetail() {
             <ScrollReveal direction="right" delay={0.2}>
               <div className={styles.quickFacts}>
                 <h3 className={styles.quickFactsTitle}>Quick Facts</h3>
-                {[
-                  { icon: '👥', label: 'Team', value: detail.quickFacts.team },
-                  {
-                    icon: '🧑‍💻',
-                    label: 'Members',
-                    value: detail.quickFacts.members,
-                  },
-                  {
-                    icon: '📚',
-                    label: 'Course',
-                    value: detail.quickFacts.course,
-                  },
-                  {
-                    icon: '💡',
-                    label: 'Total LEDs',
-                    value: detail.quickFacts.totalLEDs,
-                  },
-                  {
-                    icon: '💰',
-                    label: 'Budget',
-                    value: detail.quickFacts.budget,
-                  },
-                ].map((fact) => (
+                {(Array.isArray(detail.quickFacts)
+                  ? detail.quickFacts
+                  : [
+                      { icon: '👥', label: 'Team', value: detail.quickFacts.team },
+                      {
+                        icon: '🧑‍💻',
+                        label: 'Members',
+                        value: detail.quickFacts.members,
+                      },
+                      {
+                        icon: '📚',
+                        label: 'Course',
+                        value: detail.quickFacts.course,
+                      },
+                      {
+                        icon: '💡',
+                        label: 'Total LEDs',
+                        value: detail.quickFacts.totalLEDs,
+                      },
+                      {
+                        icon: '💰',
+                        label: 'Budget',
+                        value: detail.quickFacts.budget,
+                      },
+                    ]
+                ).map((fact) => (
                   <div key={fact.label} className={styles.factItem}>
                     <span className={styles.factIcon}>{fact.icon}</span>
                     <div>

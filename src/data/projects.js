@@ -70,6 +70,35 @@ export const projects = [
     },
     featured: true,
   },
+  {
+    id: 'project-3',
+    title: 'Personal Portfolio Website',
+    subtitle: 'Modern, Responsive Developer Portfolio & Showcase',
+    shortDescription: 'A modern, responsive personal portfolio website built with React, Vite, Framer Motion, and CSS Modules, featuring sleek glassmorphism aesthetics and CI/CD via Vercel.',
+    fullDescription: 'Designed and developed a modern, responsive personal portfolio website to showcase projects, skills, certifications, and extracurricular activities. Built using React with Vite for fast development and optimized production builds, featuring component-based architecture with CSS Modules for scoped styling. Implemented smooth scroll-reveal animations using Framer Motion, interactive UI elements, and a glassmorphism-inspired dark theme for a premium user experience. Deployed on Vercel with CI/CD integration via GitHub for automatic redeployment on every push.',
+    coverImage: '/images/projects/portfolio-cover.jpg',
+    images: [
+      '/images/projects/portfolio-cover.jpg',
+    ],
+    video: null,
+    techStack: ['React', 'Vite', 'JavaScript', 'CSS Modules', 'Framer Motion', 'Vercel'],
+    category: 'Web Development',
+    year: '2026',
+    role: 'Frontend Developer & UI/UX Designer',
+    duration: 'Personal Project',
+    features: [
+      'Designed and developed a modern, responsive personal portfolio website to showcase projects, skills, certifications, and extracurricular activities.',
+      'Built using React with Vite for fast development and optimized production builds, featuring component-based architecture with CSS Modules for scoped styling.',
+      'Implemented smooth scroll-reveal animations using Framer Motion, interactive UI elements, and a glassmorphism-inspired dark theme for a premium user experience.',
+      'Deployed on Vercel with CI/CD integration via GitHub for automatic redeployment on every push.',
+    ],
+    takeaway: 'Building my personal portfolio website enabled me to design a refined design system from scratch using CSS Modules and glassmorphic styling, master Framer Motion animations, and establish an automated CI/CD pipeline with GitHub and Vercel for seamless production deployments.',
+    links: {
+      live: 'https://my-portfolio-murex-gamma-vzdhdhsf1z.vercel.app/',
+      github: 'https://github.com/umesharandini/my-portfolio.git',
+    },
+    featured: true,
+  },
 ];
 
-export const projectCategories = ['All', 'Software Development', 'Hardware', 'Mobile Application']  ;
+export const projectCategories = ['All', 'Web Development', 'Software Development', 'Hardware', 'Mobile Application'];
