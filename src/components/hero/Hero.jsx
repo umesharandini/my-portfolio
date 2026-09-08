@@ -111,6 +111,15 @@ export default function Hero() {
               <button className="btn btn-secondary" onClick={scrollToProjects}>
                 View Projects
               </button>
+              <a
+                href="/cv/Umesha Rathnayake_CV.pdf"
+                download="Umesha Rathnayake_CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.ctaCv}
+              >
+                <FiDownload /> Download CV
+              </a>
             </motion.div>
           </div>
 

@@ -16,7 +16,7 @@ export const projects = [
     ],
     video: null,
     techStack: ['Next.js', 'TypeScript', 'Java 21', 'Spring Boot', 'PostgreSQL', 'Zustand', 'Tailwind CSS', 'AWS', 'Docker'],
-    category: 'Web',
+    category: 'Software Development',
     year: '2026',
     role: 'Full-Stack Developer & UI/UX Lead',
     duration: 'University & Industry Project',

@@ -121,6 +121,41 @@
   transform: translateY(-2px);
 }
 
+.ctaCv {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: 14px 28px;
+  background: var(--glass-bg);
+  border: 1px solid rgba(74, 222, 128, 0.35);
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  text-decoration: none;
+  backdrop-filter: blur(10px);
+}
+
+.ctaCv:hover {
+  background: rgba(74, 222, 128, 0.1);
+  border-color: var(--accent-primary);
+  color: var(--text-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(74, 222, 128, 0.25);
+}
+
+.ctaCv svg {
+  font-size: 1.1em;
+  transition: transform var(--transition-fast);
+}
+
+.ctaCv:hover svg {
+  transform: translateY(2px);
+}
+
 /* Right — Profile Photo */
 .heroImage {
   display: flex;
@@ -302,6 +337,11 @@
   .ctaPrimary {
     padding: 14px 28px;
     font-size: var(--text-sm);
+  }
+
+  .ctaCv {
+    padding: 12px 24px;
+    font-size: var(--text-xs);
   }
 
   .techBadge {
