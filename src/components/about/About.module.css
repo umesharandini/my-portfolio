@@ -1,0 +1,214 @@
+.about {
+  position: relative;
+}
+
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: var(--space-3xl);
+  align-items: start;
+}
+
+.imageWrapper {
+  position: relative;
+}
+
+.imageFrame {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  aspect-ratio: 3/4;
+  background: var(--bg-tertiary);
+}
+
+.imageFrame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-elevated));
+  color: var(--text-tertiary);
+  font-family: var(--font-heading);
+  font-weight: 800;
+}
+
+.imageGlow {
+  position: absolute;
+  inset: -2px;
+  border-radius: var(--radius-xl);
+  background: var(--accent-gradient);
+  z-index: -1;
+  opacity: 0.2;
+  filter: blur(20px);
+}
+
+.imageBorder {
+  position: absolute;
+  inset: -1px;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--glass-border);
+  pointer-events: none;
+}
+
+.experience {
+  position: absolute;
+  bottom: -16px;
+  right: -16px;
+  padding: 16px 24px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  z-index: 2;
+}
+
+.expNumber {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: 800;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+
+.expLabel {
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+.aboutContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.aboutText {
+  font-size: var(--text-lg);
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+.aboutText strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-normal);
+}
+
+.infoItem:hover {
+  background: var(--glass-bg-hover);
+  border-color: var(--glass-border-hover);
+}
+
+.infoIcon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-glow-soft);
+  border-radius: var(--radius-sm);
+  color: var(--accent-primary);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.infoLabel {
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+}
+
+.infoValue {
+  font-size: var(--text-sm);
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.techStack {
+  margin-top: var(--space-md);
+}
+
+.techTitle {
+  font-size: var(--text-sm);
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: var(--space-md);
+  font-weight: 600;
+}
+
+.techGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.techItem {
+  padding: 8px 16px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: all var(--transition-normal);
+}
+
+.techItem:hover {
+  color: var(--text-accent);
+  border-color: rgba(74, 222, 128, 0.3);
+  background: rgba(74, 222, 128, 0.06);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .aboutGrid {
+    grid-template-columns: 280px 1fr;
+    gap: var(--space-2xl);
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutGrid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .imageWrapper {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
+}
