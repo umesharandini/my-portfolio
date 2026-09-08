@@ -84,10 +84,10 @@ export default function Navbar() {
 
           {/* Social Icons */}
           <div className={styles.socialLinks}>
-            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="GitHub">
+            <a href="https://github.com/umesharandini" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="GitHub">
               <FiGithub />
             </a>
-            <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/umesha-rathnayake-937492302" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="LinkedIn">
               <FiLinkedin />
             </a>
           </div>
@@ -117,10 +117,10 @@ export default function Navbar() {
             </button>
           ))}
           <div className={styles.mobileSocials}>
-            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <a href="https://github.com/umesharandini" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <FiGithub />
             </a>
-            <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/umesha-rathnayake-937492302" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <FiLinkedin />
             </a>
           </div>

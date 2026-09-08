@@ -11,14 +11,15 @@ const contactInfo = [
 ];
 
 const socialLinks = [
-  { icon: FiGithub, href: 'https://github.com/', label: 'GitHub' },
-  { icon: FiLinkedin, href: 'https://linkedin.com/', label: 'LinkedIn' },
+  { icon: FiGithub, href: 'https://github.com/umesharandini', label: 'GitHub' },
+  { icon: FiLinkedin, href: 'https://www.linkedin.com/in/umesha-rathnayake-937492302', label: 'LinkedIn' },
   { icon: FiTwitter, href: 'https://twitter.com/', label: 'Twitter' },
 ];
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
   const [status, setStatus] = useState('idle'); // idle | sending | sent | error
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleChange = (e) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -27,13 +28,34 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('sending');
+    setErrorMessage('');
 
-    // Simulated send — replace with EmailJS or your preferred service
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    setStatus('sent');
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    try {
+      const response = await fetch('https://formspree.io/f/mrpgyvqq', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    setTimeout(() => setStatus('idle'), 4000);
+      if (response.ok) {
+        setStatus('sent');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        setTimeout(() => setStatus('idle'), 5000);
+      } else {
+        const data = await response.json().catch(() => ({}));
+        setErrorMessage(
+          data?.errors?.map((err) => err.message).join(', ') ||
+            'Something went wrong. Please try again or reach out directly.'
+        );
+        setStatus('error');
+      }
+    } catch {
+      setErrorMessage('Network error. Please check your connection or reach out directly.');
+      setStatus('error');
+    }
   };
 
   return (
@@ -153,6 +175,12 @@ export default function Contact() {
               {status === 'sent' && (
                 <div className={styles.successMessage}>
                   ✓ Message sent successfully! I'll get back to you soon.
+                </div>
+              )}
+
+              {status === 'error' && (
+                <div className={styles.errorMessage}>
+                  ✕ {errorMessage}
                 </div>
               )}
             </form>

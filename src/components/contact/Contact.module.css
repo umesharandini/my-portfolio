@@ -200,6 +200,17 @@
   margin-top: var(--space-md);
 }
 
+.errorMessage {
+  padding: var(--space-md);
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: var(--radius-md);
+  color: #f87171;
+  text-align: center;
+  font-weight: 500;
+  margin-top: var(--space-md);
+}
+
 /* Footer */
 .footer {
   margin-top: var(--space-4xl);
