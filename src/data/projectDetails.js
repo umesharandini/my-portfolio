@@ -120,7 +120,7 @@ export const projectDetails = {
   'project-2': {
     // ── Hero ──
     heroImage: '/images/projects/realProject.jpg',
-    demoVideo: '/videos/video.mp4',
+    demoVideo: '/videos/0827(5).mp4',
 
     // ── Overview ──
     introduction:
