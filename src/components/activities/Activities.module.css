@@ -18,53 +18,29 @@
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
 }
 
-.activityImage {
-  height: 160px;
-  background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-elevated));
+.activityBody {
+  padding: var(--space-xl);
+}
+
+.activityMeta {
   display: flex;
   align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.activityImage img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform var(--transition-slow);
-}
-
-.activityCard:hover .activityImage img {
-  transform: scale(1.05);
-}
-
-.activityPlaceholder {
-  font-size: 2.5rem;
-  color: var(--text-tertiary);
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
 }
 
 .activityBadge {
-  position: absolute;
-  top: var(--space-md);
-  left: var(--space-md);
   padding: 4px 12px;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(10px);
+  background: var(--accent-glow-soft);
   border-radius: var(--radius-full);
   font-size: 11px;
   color: var(--text-accent);
   font-weight: 600;
 }
 
-.activityBody {
-  padding: var(--space-xl);
-}
-
 .activityDate {
   font-size: var(--text-xs);
   color: var(--text-tertiary);
-  margin-bottom: var(--space-sm);
   font-weight: 500;
 }
 

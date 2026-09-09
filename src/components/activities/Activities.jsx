@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { FiActivity } from 'react-icons/fi';
 import SectionTitle from '../common/SectionTitle';
 import FilterTabs from '../common/FilterTabs';
 import ScrollReveal from '../common/ScrollReveal';
@@ -44,16 +43,11 @@ export default function Activities() {
                 transition={{ duration: 0.3, delay: index * 0.08 }}
               >
                 <div className={styles.activityCard}>
-                  <div className={styles.activityImage}>
-                    {activity.image ? (
-                      <img src={activity.image} alt={activity.title} loading="lazy" />
-                    ) : (
-                      <FiActivity className={styles.activityPlaceholder} />
-                    )}
-                    <span className={styles.activityBadge}>{activity.category}</span>
-                  </div>
                   <div className={styles.activityBody}>
-                    <div className={styles.activityDate}>{activity.date}</div>
+                    <div className={styles.activityMeta}>
+                      <span className={styles.activityBadge}>{activity.category}</span>
+                      <span className={styles.activityDate}>{activity.date}</span>
+                    </div>
                     <h3 className={styles.activityTitle}>{activity.title}</h3>
                     <p className={styles.activityDescription}>{activity.description}</p>
                   </div>
@@ -66,3 +60,4 @@ export default function Activities() {
     </section>
   );
 }
+
